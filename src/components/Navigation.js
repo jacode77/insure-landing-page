@@ -1,30 +1,45 @@
-import React, { useState } from "react";
-import Menu from "../icon-hamburger.svg";
-import menuItems from "./MenuItems";
+import * as React from "react";
+import MenuImg from "../icon-hamburger.svg";
 import { NavBarTitle, Wrapper } from "./styledComponents/NavBar";
-
+import Button from "@mui/material/Button";
+import Menu from "@mui/material/Menu";
+import { MenuItem } from "@mui/material";
 function Navigation() {
-  const [navbarOpen, setNavBarOpen] = useState(false);
-  const handleToggle = () => {
-    setNavBarOpen(!navbarOpen);
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
   };
 
   return (
     <>
       <Wrapper>
         <NavBarTitle>INSURE</NavBarTitle>
-        <div>
-          <img src={Menu} alt="menu icon" onClick={handleToggle} />
-          <ul className="menu">
-            {menuItems.map((menu, index) => {
-              return (
-                <li className="menu-items" key={index}>
-                  <a href="/#">{menu.title}</a>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+        <Button
+          id="basic-button"
+          aria-controls={open ? "basic-menu" : undefined}
+          aria-haspopup="true"
+          aria-expanded={open ? "true" : undefined}
+          onClick={handleClick}
+        >
+          <img src={MenuImg} alt="menu icon" />
+        </Button>
+        <Menu
+          id="basic-menu"
+          anchorEl={anchorEl}
+          open={open}
+          onClose={handleClose}
+          MenuListProps={{
+            "aria-labelledby": "basic-button",
+          }}
+        >
+          <MenuItem onClick={handleClose}>HOW WE WORK</MenuItem>
+          <MenuItem onClick={handleClose}>BLOG</MenuItem>
+          <MenuItem onClick={handleClose}>ACCOUNT</MenuItem>
+        </Menu>
       </Wrapper>
     </>
   );
