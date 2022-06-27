@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const NavBar = styled.h1`
+export const NavBarTitle = styled.h1`
   font-family: "Krona One", sans-serif;
   size: 40rem;
   font-weight: 400;
