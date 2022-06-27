@@ -12,6 +12,8 @@ import {
   SubHead,
   Button,
   IconImg,
+  Work,
+  ButtonWrapper,
 } from "./styledComponents/BodyStyling";
 
 function Body() {
@@ -60,10 +62,12 @@ function Body() {
         </DiffPara>
       </section>
 
-      <section>
-        <h1>Find out more about how we work</h1>
-        <button>How we work</button>
-      </section>
+      <Work>
+        <Title>Find out more about how we work</Title>
+        <ButtonWrapper>
+          <Button>HOW WE WORK</Button>
+        </ButtonWrapper>
+      </Work>
     </>
   );
 }

@@ -23,8 +23,9 @@ export const Title = styled.h1`
   margin: 0 0.8em;
   font-family: "DM Serif Display", serif;
   text-align: center;
-  font-size: 2.5em;
-  letter-spacing: 2px;
+  font-size: 2.4em;
+  font-weight: 400;
+  letter-spacing: 1px;
 `;
 
 export const SubHead = styled.h1`
@@ -69,4 +70,17 @@ export const DiffPara = styled.p`
 export const IconImg = styled.p`
   text-align: center;
   margin: 2em 0;
+`;
+
+export const Work = styled.section`
+  background-color: hsl(256, 26%, 20%);
+  background-repeat: no-repeat;
+  color: white;
+  margin: 8em 1.5em;
+  text-align: center;
+  padding: 3em 0;
+`;
+
+export const ButtonWrapper = styled.div`
+  margin-top: 1em;
 `;
