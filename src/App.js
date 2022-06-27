@@ -1,7 +1,18 @@
-import "./App.css";
+import React from "react";
+import Navigation from "./components/Navigation";
+import Body from "./components/Body";
+import Footer from "./components/Footer";
+import GlobalStyle from "./components/styledComponents/GlobalStyling";
 
 function App() {
-  return <div className="App">Insure Landing Page</div>;
+  return (
+    <>
+      <GlobalStyle />
+      <Navigation />
+      <Body />
+      <Footer />
+    </>
+  );
 }
 
 export default App;
