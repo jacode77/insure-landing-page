@@ -14,6 +14,7 @@ import {
   IconImg,
   Work,
   ButtonWrapper,
+  Line,
 } from "./styledComponents/BodyStyling";
 
 function Body() {
@@ -32,6 +33,7 @@ function Body() {
         <Button>VIEW PLANS</Button>
       </Humanizing>
       <section>
+        <Line>__________________</Line>
         <Title>We're different</Title>
         <IconImg>
           <img src={Snappy} alt="Snappy process icon" />

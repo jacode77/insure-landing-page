@@ -39,10 +39,11 @@ export const SubHead = styled.h1`
 export const HumanPara = styled.p`
   font-family: "Karla", sans-serif;
   font-weight: 800;
-  margin: 1.5em 2em;
+  margin: 1.5em 2.2em;
   line-height: 1.7;
   text-align: center;
-  letter-spacing: 0.5px;
+  font-size: 1em;
+  /* letter-spacing: 0.5px; */
 `;
 
 export const Button = styled.button`
@@ -83,4 +84,10 @@ export const Work = styled.section`
 
 export const ButtonWrapper = styled.div`
   margin-top: 1em;
+`;
+
+export const Line = styled.div`
+  text-align: center;
+  margin: 8em 4em 2em;
+  color: #b2a5b5;
 `;
